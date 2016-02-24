@@ -1,0 +1,154 @@
+\documentclass[ngerman,a4wide]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{courier}
+\renewcommand*{\familydefault}{phv}
+\usepackage[left=25mm,top=25mm,bottom=10mm,right=10mm]{geometry}
+\usepackage{fancyhdr}
+\lhead{Chaos inKL. e.V.}\chead{}\rhead{Formular C21\tiny{V2012.11.22}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{floatflt}
+\usepackage{ccicons}
+\usepackage{url}
+
+\usepackage[
+  pdftex,colorlinks=true,
+  pdftitle={Formular C21},pdfsubject={Ausgabe von Schlüsseln},
+  pdfauthor={Laura Eckardt},
+  pdfpagemode=UseNone,pdfstartview=FitH,pagebackref,pdfhighlight={/N}, unicode=true
+]{hyperref}
+\newcommand{\textforlabel}[2]{%
+\TextField[name={#1},value={#2},width=7em,align=2,%
+bordercolor={1 1 1},readonly=true]{}%
+}
+\newcommand{\bearbeitungsgebuehr}{
+	%TODO
+	%\TextField[name=bg,width=2em,readonly=true]{}
+	5
+}
+\newcommand{\kaution}{
+	%TODO
+	%\TextField[name=kaution,width=2em,,readonly=true]{}
+	20
+}
+\renewcommand{\baselinestretch}{1}
+\begin{document}
+\begin{floatingfigure}{0.35\textwidth}
+    \vspace{1cm}
+    \includegraphics[viewport=0 0 744 541, width=4cm]{../korrespondenz/logo-schwarz.pdf}
+\end{floatingfigure}
+
+\section*{Ausgabe von Schlüsseln}
+
+
+
+\begin{Form} 
+\begin{tabular}{|rl|}
+\hline
+&\\*[-0.9em]\multicolumn{2}{|c|}{\textbf{Person}}\\
+&\\*[-0.9em]Vorname:&%
+\TextField[name=vorname,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]Name:&%
+\TextField[name=name,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]Straße:&%
+\TextField[name=strasse,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]PLZ, Ort:&%
+\TextField[name=plzort,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]e-Mail:&%
+\TextField[name=email,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\
+\hline
+\end{tabular}
+
+
+
+\begin{minipage}{12cm}
+An o.g. Person wurden am 
+\TextField[name=date,width=7em,%
+bordercolor={0.65 0.79 0.94}]{}
+folgende Schlüssel übergeben:\\
+\end{minipage}
+\hfill
+\begin{tabular}{|rl|}
+\hline
+&\\*[-0.9em]\multicolumn{2}{|c|}{%
+\textbf{Schlüssel}}\\
+&\\*[-0.9em]\textforlabel{t1}{Hauseingang:}&%
+\CheckBox[name=e1,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{t2}{101:}&%
+\CheckBox[name=e2,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{t3}{.........................}&%
+\CheckBox[name=e3,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\
+\hline
+\end{tabular}
+\vspace{-1cm}
+\section*{Finanzielles}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+ \item Für die Erstellung und Ausgabe der Schlüssel wird eine Bearbeitungsgebühr in Höhe von \bearbeitungsgebuehr€ je Schlüssel erhoben.
+ \item Bei der Ausgabe der Schlüssel wird eine Kaution in Höhe von \kaution€ eingezahlt. Die Kaution wird nach Rückgabe der Schlüssel erstattet.
+ \item Bearbeitungsgebühr und Kaution sind bei Schlüsselübergabe zu bezahlen.
+\end{itemize}
+
+\section*{Regeln}
+Der Empfänger der Schlüssel erklärt das Folgende:
+\begin{itemize}
+ \setlength{\itemsep}{-2pt}
+ \item Die zur Verfügung gestellten Schlüssel werden nicht eigenmächtig vervielfältigt.
+ \item Das Ausleihen, die Weitergabe, sowie das Verschenken der zur Verfügung gestellten Schlüssel ist untersagt.
+ \item Nach Aufforderung durch den Chaos inKL. e.V. werden die zur Verfügung gestellten Schlüssel unverzüglich zurückgegeben. 
+ \item Die Schlüssel müssen mit Beendigung der Mitgliedschaft dem Chaos inKL. e.V. zurückgegeben werden.
+ \item Die zur Verfügung gestellten Schlüssel dürfen nur für Zwecke verwendet werden, die die Ziele des Chaos inKL. e.V. fördern.
+ \item Bei Verlust von einem oder mehreren Schlüsseln ist dies unverzüglich dem Chaos inKL. e.V. zu melden.
+\end{itemize}
+
+\vspace{2cm}
+\begin{minipage}{5cm}
+ \dotfill\\
+ Ort, Datum
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{5cm}
+ \dotfill\\
+ Unterschrift
+\end{minipage}
+
+\section*{Rückgabe}
+Die o.g. Schlüssel wurden am \TextField[name=date2,width=7em,%
+bordercolor={0.65 0.79 0.94}]{} zurückgegeben, die Kaution in Höhe von\kaution€ wurde ausgezahlt.\\
+\vfill
+\begin{minipage}{5cm}
+ \dotfill\\
+ Ort, Datum
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{5cm}
+ \dotfill\\
+ Kaution erhalten
+\end{minipage}
+\let\thefootnote\relax\footnotetext{
+%\begin{flushright}
+{\fontsize{5.5}{7} \selectfont
+\ccby \hspace{0.1em}
+Dieses Dokument steht unter der Creative Commons Namensnennung 3.0 Deutschland Lizenz. Mehr Informationen zur Lizenz unter \url{https://creativecommons.org/licenses/by/3.0/de/}
+}
+%\end{flushright}
+}
+
+\end{Form}
+\end{document}

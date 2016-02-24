@@ -1,0 +1,129 @@
+\documentclass[ngerman,a4wide]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{courier}
+\renewcommand*{\familydefault}{phv}
+\usepackage[left=25mm,top=25mm,bottom=10mm,right=10mm]{geometry}
+\usepackage{fancyhdr}
+\lhead{Chaos inKL. e.V.}\chead{}\rhead{Formular C22\tiny{V2016.02.24}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{floatflt}
+\usepackage[
+  pdftex,colorlinks=true,
+  pdftitle={Formular C22},pdfsubject={Auslagenerstattung},
+  pdfauthor={Laura Eckardt},
+  pdfpagemode=UseNone,pdfstartview=FitH,pagebackref,pdfhighlight={/N}, unicode=true
+]{hyperref}
+\newcommand{\textforlabel}[2]{%
+\TextField[name={#1},value={#2},width=7em,align=2,%
+bordercolor={1 1 1},readonly=true]{}%
+}
+\newcommand{\bearbeitungsgebuehr}{
+	%TODO
+	%\TextField[name=bg,width=2em,readonly=true]{}
+	5
+}
+\newcommand{\kaution}{
+	%TODO
+	%\TextField[name=kaution,width=2em,,readonly=true]{}
+	20
+}
+\renewcommand{\baselinestretch}{1}
+\begin{document}
+\begin{floatingfigure}{0.35\textwidth}
+    \vspace{1cm}
+    \includegraphics[viewport=0 0 744 541, width=4cm]{../korrespondenz/logo-schwarz.pdf}
+\end{floatingfigure}
+\begin{Form}
+\section*{Erstattung von Auslagen}
+
+
+
+\vspace{3cm}
+\hfill
+\begin{tabular}{|rl|}
+\hline
+&\\*[-0.9em]Beleg Nr.:& \TextField[name=belegnr,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]Betrag:& \TextField[name=betrag,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]Datum:& \TextField[name=datum,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\
+\hline
+&\\*[-0.9em]\multicolumn{2}{|c|}{\textbf{Ausgelegt von:}}\\
+&\\*[-0.9em]Vorname:&%
+\TextField[name=vorname,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]Name:&%
+\TextField[name=name,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\multicolumn{2}{|c|}{\textbf{Auszahlung}}\\
+&\CheckBox[name=a1,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{} Bar 
+\CheckBox[name=a2,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{} Überweisung \\
+&\\*[-0.9em]IBAN:&%
+\TextField[name=konto,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]BIC:&%
+\TextField[name=blz,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]Bank:&%
+\TextField[name=bank,width=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+
+&\\
+\hline
+\end{tabular}
+
+\vspace{2cm}
+
+\hfill
+\begin{minipage}{7cm}
+
+
+Bei Barauszahlung: Ich bestätige hiermit den o.g. Betrag erhalten zu haben.
+\vspace{1cm}
+
+\hfill
+\begin{minipage}{7cm}
+ \dotfill\\
+ Ort, Datum
+\end{minipage}
+
+\vspace{1cm}
+
+\hfill
+\begin{minipage}{7cm}
+ \dotfill\\
+ Unterschrift
+\end{minipage}
+
+\end{minipage}
+
+\vspace{-16cm}
+\begin{tabular}{|p{8cm}|}
+\hline
+Beleg hier einkleben oder an das Blatt heften\\
+*[65em] \\
+\hline
+\end{tabular}
+
+
+
+\vfill
+
+
+%\vspace{2cm}
+
+
+
+\end{Form}
+\end{document}

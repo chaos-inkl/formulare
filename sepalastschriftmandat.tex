@@ -1,0 +1,132 @@
+\documentclass[ngerman,a4wide]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{courier}
+\renewcommand*{\familydefault}{phv}
+\usepackage[left=25mm,top=25mm,bottom=10mm,right=10mm]{geometry}
+\usepackage{fancyhdr}
+\lhead{Chaos inKL. e.V.}\chead{}\rhead{Formular F1\tiny{V2015.01.16}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{floatflt}
+\usepackage{ccicons}
+\usepackage{url}
+
+\usepackage[
+  pdftex,colorlinks=true,
+  pdftitle={Formular F1},pdfsubject={SEPA-Lastschriftmandat},
+  pdfauthor={Laura Eckardt},
+  pdfpagemode=UseNone,pdfstartview=FitH,pagebackref,pdfhighlight={/N}, unicode=true
+]{hyperref}
+\parindent=0px
+\newcommand{\textforlabel}[2]{%
+\TextField[name={#1},value={#2},width=7em,align=2,%
+bordercolor={1 1 1},readonly=true]{}%
+}
+\renewcommand{\baselinestretch}{1}
+\begin{document}
+\begin{floatingfigure}{0.35\textwidth}
+    \vspace{1cm}
+    \includegraphics[viewport=0 0 744 541, width=4cm]{../korrespondenz/logo-schwarz.pdf}
+\end{floatingfigure}
+\begin{Form}
+\section*{SEPA-Lastschriftmandat}
+
+Chaos inKL. e.V.\\
+Rudolf-Breitscheid-Straße 65\\
+67655 Kaiserslautern\\
+Gläubiger-Identifikationsnummer: DE46CCC00001067402\\
+Mandatsreferenz wird separat mitgeteilt. \\
+
+\vspace{1cm}
+Ich ermächtige den Chaos inKL. e.V., Zahlungen von meinem Konto mittels Lastschrift einzuziehen. \\
+Zugleich weise ich mein Kreditinstitut an, die vom Chaos inKL. e.V. auf mein Konto gezogenen Lastschriften einzulösen.\\
+
+Name, Vorname und genaue Anschrift des Kontoinhabers:\\
+\begin{tabular}{|p{.9\textwidth}|}
+\hline
+\TextField[name=name,width=.9\textwidth,height=8em,multiline=true,%
+bordercolor={0.65 0.79 0.94}]{}\\
+\hline
+\end{tabular}\\
+
+IBAN:\\
+\begin{tabular}{|p{.9\textwidth}|}
+\hline
+\TextField[name=iban,width=.9\textwidth,%height=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+\hline
+\end{tabular}\\
+
+Kreditinstitut(Name):\\
+\begin{tabular}{|p{.9\textwidth}|}
+\hline
+\TextField[name=bank,width=.9\textwidth,%height=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+\hline
+\end{tabular}\\
+
+BIC:\\
+\begin{tabular}{|p{.9\textwidth}|}
+\hline
+\TextField[name=bic,width=.9\textwidth,%height=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+\hline
+\end{tabular}\\
+\\
+Bei abweichendem Kontoinhaber:\\
+Dieses SEPA-Lastschriftmandat gilt für die Vereinbarung mit:\\
+\begin{tabular}{|p{.9\textwidth}|}
+\hline
+\TextField[name=altname,width=.9\textwidth,%height=15em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+\hline
+\end{tabular}\\
+%NAME VORNAME
+
+Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.\\
+
+Eventuelle Änderungen der Kontodaten werde ich dem Chaos inKL. e.V. unverzüglich mitteilen.\\
+
+Sollte mein Konto im Zeitpunkt der Beitragseinziehung nicht die erforderliche Deckung aufweisen und entstehen dem Verein durch die Zahlungsverweigerung des kontoführenden Instituts weitere Kosten, werde ich diese auf Anforderung unverzüglich erstatten.\\
+
+Teileinlösungen werden im Lastschriftverfahren nicht vorgenommen. \\
+
+\vspace{3cm}
+\begin{minipage}{7cm}
+ \dotfill\\
+ Ort, Datum
+\end{minipage}
+\hfill
+\begin{minipage}{7cm}
+ \dotfill\\
+ Unterschrift
+\end{minipage}
+
+
+
+
+
+
+\vfill
+
+
+%\vspace{2cm}
+
+\let\thefootnote\relax\footnotetext{
+%\begin{flushright}
+{\fontsize{5.5}{7} \selectfont
+\ccby \hspace{0.1em}
+Dieses Dokument steht unter der Creative Commons Namensnennung 3.0 Deutschland Lizenz. Mehr Informationen zur Lizenz unter \url{https://creativecommons.org/licenses/by/3.0/de/}
+}
+%\end{flushright}
+}
+
+
+\end{Form}
+\end{document}
